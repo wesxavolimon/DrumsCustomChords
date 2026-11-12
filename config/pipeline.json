@@ -1,6 +1,6 @@
 {
-  "name": "mvp1",
-  "version": 1,
+  "name": "cifra-bateria-customizada",
+  "version": 2,
   "paths": {
     "work": "work/{id}",
     "out": "out/{id}",
@@ -15,7 +15,7 @@
       "name": "separate_vocals",
       "script": "src/workflows/separate_vocals.py",
       "inputs": ["{input}"],
-      "outputs": ["{work}/vocals.wav"],
+      "outputs": ["{work}/vocals.wav", "{work}/drums.wav", "{work}/no_drums.wav"],
       "params": { "model": "htdemucs" },
       "retries": 1
     },
@@ -30,19 +30,38 @@
     {
       "name": "tempo_compasso",
       "script": "src/workflows/tempo_compasso.py",
-      "inputs": ["{input}"],
+      "inputs": ["{work}/drums.wav"],
       "outputs": ["{work}/compassos.json"],
       "params": { "beats_per_bar": 4 },
       "retries": 0
     },
     {
+      "name": "detect_drums",
+      "script": "src/workflows/detect_drums.py",
+      "inputs": ["{work}/drums.wav", "{work}/compassos.json"],
+      "outputs": ["{work}/drums_events.json"],
+      "params": { "dictionary": "config/dicionario.yaml", "steps_per_bar": 16 },
+      "retries": 0
+    },
+    {
+      "name": "classify_drums",
+      "script": "src/workflows/classify_drums.py",
+      "inputs": ["{work}/drums_events.json", "{work}/compassos.json"],
+      "outputs": ["{work}/drums_patterns.json"],
+      "params": { "dictionary": "config/dicionario.yaml" },
+      "retries": 0
+    },
+    {
       "name": "make_cifra",
       "script": "src/workflows/make_cifra.py",
-      "inputs": ["{work}/letra.json", "{work}/compassos.json"],
-      "outputs": ["{out}/cifra.md"],
-      "params": {},
+      "inputs": ["{work}/letra.json", "{work}/compassos.json", "{work}/drums_patterns.json"],
+      "outputs": ["{out}/{id}-cifra.md"],
+      "params": {
+        "dictionary": "config/dicionario.yaml",
+        "llm_url": "http://localhost:11435/v1/chat/completions",
+        "use_llm": true
+      },
       "retries": 0
     }
   ]
 }
-

@@ -1,0 +1,113 @@
+# Dicionário de Códigos de Bateria Customizados
+# Editável para ajustar limiares e regras de detecção sem alterar o código.
+
+bands:
+  b:
+    name: "Bumbo"
+    low_hz: 30
+    high_hz: 130
+    threshold_rel: 0.25
+  s:
+    name: "Surdo"
+    low_hz: 80
+    high_hz: 200
+    threshold_rel: 0.28
+  t1:
+    name: "Tom 1"
+    low_hz: 150
+    high_hz: 350
+    threshold_rel: 0.30
+  c:
+    name: "Caixa"
+    low_hz: 200
+    high_hz: 4000
+    threshold_rel: 0.25
+  a:
+    name: "Aro"
+    low_hz: 800
+    high_hz: 3500
+    threshold_rel: 0.22
+  h:
+    name: "Hi-hat fechado"
+    low_hz: 5000
+    high_hz: 15000
+    threshold_rel: 0.18
+  ha:
+    name: "Hi-hat semi-aberto"
+    low_hz: 4000
+    high_hz: 14000
+    threshold_rel: 0.22
+  rc:
+    name: "Cúpula do ride"
+    low_hz: 2400
+    high_hz: 5200
+    threshold_rel: 0.28
+  pa1:
+    name: "Prato de ataque 1 seco"
+    low_hz: 3500
+    high_hz: 16000
+    threshold_rel: 0.45
+
+codes:
+  - code: "S"
+    description: "Nenhum evento no compasso"
+    rule:
+      type: "silence"
+      max_events: 0
+
+  - code: "BQ-bpa1"
+    description: "Bumbo + ataque 1 seco"
+    rule:
+      type: "accent"
+      required: ["b", "pa1"]
+      max_total_steps: 4
+
+  - code: "CR-cs"
+    description: "Crescendo de caixa + surdo em colcheias"
+    rule:
+      type: "crescendo"
+      required: ["c", "s"]
+      min_steps: 4
+
+  - code: "V-ct1s"
+    description: "Virada caixa -> tom 1 -> surdo"
+    rule:
+      type: "fill"
+      sequence: ["c", "t1", "s"]
+
+  - code: "V-cs"
+    description: "Virada caixa -> surdo"
+    rule:
+      type: "fill"
+      sequence: ["c", "s"]
+
+  - code: "L-cbrc"
+    description: "Caixa + bumbo + cúpula do ride"
+    rule:
+      type: "groove"
+      required: ["c", "b", "rc"]
+
+  - code: "L-cbha"
+    description: "Caixa + bumbo + hi-hat semi-aberto"
+    rule:
+      type: "groove"
+      required: ["c", "b", "ha"]
+
+  - code: "L-cbh"
+    description: "Caixa + bumbo + hi-hat fechado"
+    rule:
+      type: "groove"
+      required: ["c", "b", "h"]
+
+  - code: "L-abh"
+    description: "Aro + bumbo + hi-hat fechado"
+    rule:
+      type: "groove"
+      required: ["a", "b", "h"]
+
+  - code: "L-h"
+    description: "Só hi-hat fechado"
+    rule:
+      type: "groove"
+      required: ["h"]
+

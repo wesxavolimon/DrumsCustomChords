@@ -77,16 +77,29 @@ def _transcribe_faster_whisper(audio_path: Path, model_name: str, lang: str | No
         compute_type = "float16" if device == "cuda" else "int8"
 
     model = WhisperModel(model_name, device=device, compute_type=compute_type)
-    segments, _ = model.transcribe(str(audio_path), language=lang or None, vad_filter=True)
+    segments, _ = model.transcribe(
+        str(audio_path), language=lang or None, vad_filter=True, word_timestamps=True
+    )
     result = []
     for seg in segments:
         text = (seg.text or "").strip()
         if text:
-            result.append({
+            entry = {
                 "start": round(float(seg.start), 2),
                 "end": round(float(seg.end), 2),
                 "text": text,
-            })
+            }
+            if getattr(seg, "words", None):
+                entry["words"] = [
+                    {
+                        "word": (w.word or "").strip(),
+                        "start": round(float(w.start), 2),
+                        "end": round(float(w.end), 2),
+                    }
+                    for w in seg.words
+                    if (w.word or "").strip()
+                ]
+            result.append(entry)
     return result
 
 

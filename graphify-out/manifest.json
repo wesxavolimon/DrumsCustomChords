@@ -1,127 +1,147 @@
 {
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\config\\audio.json": {
+  "config/audio.json": {
     "mtime": 1794508397.7992592,
     "ast_hash": "2ea06f4bb546d5de2fcebe2fb859cf55",
     "semantic_hash": "2ea06f4bb546d5de2fcebe2fb859cf55"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\config\\pipeline.json": {
+  "config/pipeline.json": {
     "mtime": 1794511016.9475262,
     "ast_hash": "568960ac86a53f8094f5acf3f25498f9",
     "semantic_hash": "568960ac86a53f8094f5acf3f25498f9"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\src\\run.py": {
+  "src/run.py": {
     "mtime": 1794507329.0200217,
     "ast_hash": "da1a3cfb72fe207980366bf2937821dc",
     "semantic_hash": "da1a3cfb72fe207980366bf2937821dc"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\.agents\\rules\\antigravity-rtk-rules.md": {
+  ".agents/rules/antigravity-rtk-rules.md": {
     "mtime": 1794507447.3041205,
     "ast_hash": "f35bc5f83b89536ea1788c5c86377968",
     "semantic_hash": "f35bc5f83b89536ea1788c5c86377968"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\AGENTS.md": {
+  "AGENTS.md": {
     "mtime": 1794511345.9639802,
     "ast_hash": "323e719db0e84270b3a8713d91891750",
     "semantic_hash": "323e719db0e84270b3a8713d91891750"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\src\\workflows\\classify_drums.py": {
+  "src/workflows/classify_drums.py": {
     "mtime": 1794510929.5042367,
     "ast_hash": "0ca700f7bc709a14a59f9f41e83e96ed",
     "semantic_hash": "0ca700f7bc709a14a59f9f41e83e96ed"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\src\\workflows\\detect_drums.py": {
+  "src/workflows/detect_drums.py": {
     "mtime": 1794510927.8479888,
     "ast_hash": "ed3f5351c0548688236092eaf212b886",
     "semantic_hash": "ed3f5351c0548688236092eaf212b886"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\src\\workflows\\make_cifra.py": {
+  "src/workflows/make_cifra.py": {
     "mtime": 1794511110.38369,
     "ast_hash": "7179443c903a1eb929e7c8f68e3d4451",
     "semantic_hash": "7179443c903a1eb929e7c8f68e3d4451"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\src\\workflows\\separate_vocals.py": {
+  "src/workflows/separate_vocals.py": {
     "mtime": 1794511017.0373595,
     "ast_hash": "813cd408ba91f984079b218d5db337af",
     "semantic_hash": "813cd408ba91f984079b218d5db337af"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\src\\workflows\\tempo_compasso.py": {
+  "src/workflows/tempo_compasso.py": {
     "mtime": 1794509304.4180253,
     "ast_hash": "a3456db478fec7012100b44f1dc41a30",
     "semantic_hash": "a3456db478fec7012100b44f1dc41a30"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\src\\workflows\\transcribe.py": {
+  "src/workflows/transcribe.py": {
     "mtime": 1794511017.0881357,
     "ast_hash": "c27bc5b17a30f9fc8b45c281218639f8",
     "semantic_hash": "c27bc5b17a30f9fc8b45c281218639f8"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\tests\\test_mvp1.py": {
+  "tests/test_mvp1.py": {
     "mtime": 1794510969.2448423,
     "ast_hash": "0ff4ca41d05e00e30f69c78cccde2fe3",
     "semantic_hash": "0ff4ca41d05e00e30f69c78cccde2fe3"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\config\\dicionario.yaml": {
+  "config/dicionario.yaml": {
     "mtime": 1794510902.557369,
     "ast_hash": "2397484a6557a0b9ce72dc93f531521d",
     "semantic_hash": "2397484a6557a0b9ce72dc93f531521d"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\docs\\musica-bateria-pipeline.md": {
+  "docs/musica-bateria-pipeline.md": {
     "mtime": 1794510149.699286,
     "ast_hash": "7445b6c853cfde1009bddcaf558bcaad",
     "semantic_hash": "7445b6c853cfde1009bddcaf558bcaad"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\openspec\\changes\\archive\\2026-11-12-cifra-bateria-customizada\\design.md": {
+  "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/design.md": {
     "mtime": 1794510469.8520877,
     "ast_hash": "d1de1e57fa689117038b80770ff0291f",
     "semantic_hash": "d1de1e57fa689117038b80770ff0291f"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\openspec\\changes\\archive\\2026-11-12-cifra-bateria-customizada\\proposal.md": {
+  "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/proposal.md": {
     "mtime": 1794510469.9067712,
     "ast_hash": "feb9668c1fd1498958893a451823d53f",
     "semantic_hash": "feb9668c1fd1498958893a451823d53f"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\openspec\\changes\\archive\\2026-11-12-cifra-bateria-customizada\\specs\\cifra-bateria-customizada\\spec.md": {
+  "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md": {
     "mtime": 1794510518.8728075,
     "ast_hash": "ad5dcf524a5a40f4b47f3ca9c86877b9",
     "semantic_hash": "ad5dcf524a5a40f4b47f3ca9c86877b9"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\openspec\\changes\\archive\\2026-11-12-cifra-bateria-customizada\\tasks.md": {
+  "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/tasks.md": {
     "mtime": 1794511346.0000055,
     "ast_hash": "1f7a8ff48b934a46f8798cc75a37cb7e",
     "semantic_hash": "1f7a8ff48b934a46f8798cc75a37cb7e"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\openspec\\changes\\archive\\2026-11-12-mvp1-vocal-letra-cifra\\design.md": {
+  "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/design.md": {
     "mtime": 1794505457.80803,
     "ast_hash": "7dd5105a41be22e7131bf9ae312ecfc4",
     "semantic_hash": "7dd5105a41be22e7131bf9ae312ecfc4"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\openspec\\changes\\archive\\2026-11-12-mvp1-vocal-letra-cifra\\proposal.md": {
+  "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/proposal.md": {
     "mtime": 1794505457.8345146,
     "ast_hash": "b7f93ed05f791b01b105c870a0c6fe77",
     "semantic_hash": "b7f93ed05f791b01b105c870a0c6fe77"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\openspec\\changes\\archive\\2026-11-12-mvp1-vocal-letra-cifra\\specs\\mvp1\\spec.md": {
+  "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md": {
     "mtime": 1794505457.8714595,
     "ast_hash": "8117913625aad285bf880434697c6d58",
     "semantic_hash": "8117913625aad285bf880434697c6d58"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\openspec\\changes\\archive\\2026-11-12-mvp1-vocal-letra-cifra\\tasks.md": {
+  "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/tasks.md": {
     "mtime": 1794509808.67156,
     "ast_hash": "8e22d332e7573e01c37ec6ae26dcd04a",
     "semantic_hash": "8e22d332e7573e01c37ec6ae26dcd04a"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\openspec\\specs\\cifra-bateria-customizada\\spec.md": {
+  "openspec/specs/cifra-bateria-customizada/spec.md": {
     "mtime": 1794511380.4122324,
     "ast_hash": "07ff24e1c224cd3dd17624cfdff29b67",
     "semantic_hash": "07ff24e1c224cd3dd17624cfdff29b67"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\openspec\\specs\\mvp1\\spec.md": {
+  "openspec/specs/mvp1/spec.md": {
     "mtime": 1794510469.9981441,
     "ast_hash": "21028cb3cddf68ebabb03c03713f5662",
     "semantic_hash": "21028cb3cddf68ebabb03c03713f5662"
   },
-  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\requirements.txt": {
+  "requirements.txt": {
     "mtime": 1794508852.7281897,
     "ast_hash": "9bc38d1d1d3405967e2560a1bf0c0cb6",
     "semantic_hash": "9bc38d1d1d3405967e2560a1bf0c0cb6"
+  },
+  ".claude/settings.json": {
+    "mtime": 1793969388.063156,
+    "ast_hash": "f4b74725f8cb2ee394fea29ef8c82066",
+    "semantic_hash": ""
+  },
+  ".claude/settings.local.json": {
+    "mtime": 1789556445.1417224,
+    "ast_hash": "e211de5ad0ac2f841ab95bddf7ff719e",
+    "semantic_hash": ""
+  },
+  ".codex/hooks.json": {
+    "mtime": 1793969388.102148,
+    "ast_hash": "594d526b1fc7814fc9b1ad46cf2fdea1",
+    "semantic_hash": ""
+  },
+  ".gemini/settings.json": {
+    "mtime": 1793969388.1202433,
+    "ast_hash": "1abe9c77afbd7b4d198609b4136f77b7",
+    "semantic_hash": ""
   }
 }

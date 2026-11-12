@@ -1,24 +1,7 @@
 {
   "directed": false,
   "multigraph": false,
-  "graph": {
-    "hyperedges": [
-      {
-        "id": "mvp1_pipeline",
-        "label": "MVP1 pipeline: vocals to lyrics and bars to cifra",
-        "nodes": [
-          "drumscustomchords_spec_vocal_separation",
-          "drumscustomchords_spec_lyrics_transcription",
-          "drumscustomchords_spec_tempo_bars",
-          "drumscustomchords_spec_cifra_output"
-        ],
-        "relation": "form",
-        "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md"
-      }
-    ]
-  },
+  "graph": {},
   "nodes": [
     {
       "label": "run.py",
@@ -26,9 +9,9 @@
       "source_file": "src/run.py",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "src_run",
       "community": 2,
-      "norm_label": "run.py",
-      "id": "src_run"
+      "norm_label": "run.py"
     },
     {
       "label": "now()",
@@ -36,9 +19,9 @@
       "source_file": "src/run.py",
       "source_location": "L32",
       "_origin": "ast",
+      "id": "src_run_now",
       "community": 2,
-      "norm_label": "now()",
-      "id": "src_run_now"
+      "norm_label": "now()"
     },
     {
       "label": "sha()",
@@ -46,9 +29,9 @@
       "source_file": "src/run.py",
       "source_location": "L36",
       "_origin": "ast",
+      "id": "src_run_sha",
       "community": 2,
-      "norm_label": "sha()",
-      "id": "src_run_sha"
+      "norm_label": "sha()"
     },
     {
       "label": "file_sig()",
@@ -56,9 +39,9 @@
       "source_file": "src/run.py",
       "source_location": "L44",
       "_origin": "ast",
+      "id": "src_run_file_sig",
       "community": 2,
-      "norm_label": "file_sig()",
-      "id": "src_run_file_sig"
+      "norm_label": "file_sig()"
     },
     {
       "label": "load_json()",
@@ -66,9 +49,9 @@
       "source_file": "src/run.py",
       "source_location": "L49",
       "_origin": "ast",
+      "id": "src_run_load_json",
       "community": 2,
-      "norm_label": "load_json()",
-      "id": "src_run_load_json"
+      "norm_label": "load_json()"
     },
     {
       "label": "save_json_atomic()",
@@ -76,9 +59,9 @@
       "source_file": "src/run.py",
       "source_location": "L56",
       "_origin": "ast",
+      "id": "src_run_save_json_atomic",
       "community": 2,
-      "norm_label": "save_json_atomic()",
-      "id": "src_run_save_json_atomic"
+      "norm_label": "save_json_atomic()"
     },
     {
       "label": "tmp_path()",
@@ -86,9 +69,9 @@
       "source_file": "src/run.py",
       "source_location": "L64",
       "_origin": "ast",
+      "id": "src_run_tmp_path",
       "community": 2,
-      "norm_label": "tmp_path()",
-      "id": "src_run_tmp_path"
+      "norm_label": "tmp_path()"
     },
     {
       "label": "nonempty()",
@@ -96,9 +79,9 @@
       "source_file": "src/run.py",
       "source_location": "L69",
       "_origin": "ast",
+      "id": "src_run_nonempty",
       "community": 2,
-      "norm_label": "nonempty()",
-      "id": "src_run_nonempty"
+      "norm_label": "nonempty()"
     },
     {
       "label": "parse_overrides()",
@@ -106,9 +89,9 @@
       "source_file": "src/run.py",
       "source_location": "L74",
       "_origin": "ast",
+      "id": "src_run_parse_overrides",
       "community": 2,
-      "norm_label": "parse_overrides()",
-      "id": "src_run_parse_overrides"
+      "norm_label": "parse_overrides()"
     },
     {
       "label": "preflight()",
@@ -116,9 +99,9 @@
       "source_file": "src/run.py",
       "source_location": "L90",
       "_origin": "ast",
+      "id": "src_run_preflight",
       "community": 2,
-      "norm_label": "preflight()",
-      "id": "src_run_preflight"
+      "norm_label": "preflight()"
     },
     {
       "label": "run_step()",
@@ -126,9 +109,9 @@
       "source_file": "src/run.py",
       "source_location": "L106",
       "_origin": "ast",
+      "id": "src_run_run_step",
       "community": 2,
-      "norm_label": "run_step()",
-      "id": "src_run_run_step"
+      "norm_label": "run_step()"
     },
     {
       "label": "main()",
@@ -136,232 +119,9 @@
       "source_file": "src/run.py",
       "source_location": "L138",
       "_origin": "ast",
+      "id": "src_run_main",
       "community": 2,
-      "norm_label": "main()",
-      "id": "src_run_main"
-    },
-    {
-      "label": "DrumsCustomChords project",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "drumscustomchords project",
-      "id": "drumscustomchords_agents_project"
-    },
-    {
-      "label": "Technical premises (local Python, cache, sequential VRAM, timing from code not LLM)",
-      "file_type": "concept",
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Timing comes from code to avoid LLM hallucination; Demucs/Whisper/Gemma run in sequence due to 12GB VRAM",
-      "community": 0,
-      "norm_label": "technical premises (local python, cache, sequential vram, timing from code not llm)",
-      "id": "drumscustomchords_agents_technical_premises"
-    },
-    {
-      "label": "Phase 1 - Drum map",
-      "file_type": "concept",
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "phase 1 - drum map",
-      "id": "drumscustomchords_agents_phase1"
-    },
-    {
-      "label": "Phase 2 - Chord sheet and lyrics aligned to map",
-      "file_type": "concept",
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "phase 2 - chord sheet and lyrics aligned to map",
-      "id": "drumscustomchords_agents_phase2"
-    },
-    {
-      "label": "Phase 3 - PDF output, OCR (TBD)",
-      "file_type": "concept",
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "phase 3 - pdf output, ocr (tbd)",
-      "id": "drumscustomchords_agents_phase3"
-    },
-    {
-      "label": "Git/OpenSpec workflow (feature/mvp1, no PRs)",
-      "file_type": "concept",
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "git/openspec workflow (feature/mvp1, no prs)",
-      "id": "drumscustomchords_agents_git_workflow"
-    },
-    {
-      "label": "MVP 1 deliverable",
-      "file_type": "concept",
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "mvp 1 deliverable",
-      "id": "drumscustomchords_agents_mvp1"
-    },
-    {
-      "label": "MVP1 design decisions (cache per step, Demucs, faster-whisper, librosa)",
-      "file_type": "document",
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/design.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "mvp1 design decisions (cache per step, demucs, faster-whisper, librosa)",
-      "id": "drumscustomchords_design_decisions"
-    },
-    {
-      "label": "cifra.md format",
-      "file_type": "concept",
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/design.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "cifra.md format",
-      "id": "drumscustomchords_design_cifra_format"
-    },
-    {
-      "label": "MVP1 risks (Whisper errors, non-4/4 beat tracking)",
-      "file_type": "concept",
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/design.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "mvp1 risks (whisper errors, non-4/4 beat tracking)",
-      "id": "drumscustomchords_design_risks"
-    },
-    {
-      "label": "MVP1 proposal",
-      "file_type": "document",
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/proposal.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Phase 1 is large; MVP1 validates the base with the simplest part",
-      "community": 0,
-      "norm_label": "mvp1 proposal",
-      "id": "drumscustomchords_proposal_mvp1"
-    },
-    {
-      "label": "Capability: vocal-separation",
-      "file_type": "concept",
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "capability: vocal-separation",
-      "id": "drumscustomchords_spec_vocal_separation"
-    },
-    {
-      "label": "Capability: lyrics-transcription",
-      "file_type": "concept",
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "capability: lyrics-transcription",
-      "id": "drumscustomchords_spec_lyrics_transcription"
-    },
-    {
-      "label": "Capability: tempo-bars",
-      "file_type": "concept",
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "capability: tempo-bars",
-      "id": "drumscustomchords_spec_tempo_bars"
-    },
-    {
-      "label": "Capability: cifra-output",
-      "file_type": "concept",
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "capability: cifra-output",
-      "id": "drumscustomchords_spec_cifra_output"
-    },
-    {
-      "label": "MVP1 task list",
-      "file_type": "document",
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/tasks.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "mvp1 task list",
-      "id": "drumscustomchords_tasks_plan"
-    },
-    {
-      "label": "RTK rules",
-      "file_type": "document",
-      "source_file": ".agents/rules/antigravity-rtk-rules.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 10,
-      "norm_label": "rtk rules",
-      "id": "drumscustomchords_antigravity_rtk_rules_rtk"
+      "norm_label": "main()"
     },
     {
       "label": "classify_drums.py",
@@ -1020,7 +780,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "tests_test_mvp1_testworkflowscripts",
-      "community": 9,
+      "community": 5,
       "norm_label": "testworkflowscripts"
     },
     {
@@ -1030,7 +790,7 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "tests_test_mvp1_testworkflowscripts_test_separate_vocals_extracts_vocals_drums_and_no_drums",
-      "community": 9,
+      "community": 5,
       "norm_label": ".test_separate_vocals_extracts_vocals_drums_and_no_drums()"
     },
     {
@@ -1040,7 +800,7 @@
       "source_location": "L131",
       "_origin": "ast",
       "id": "tests_test_mvp1_testworkflowscripts_test_transcribe_writes_timestamped_segments",
-      "community": 9,
+      "community": 5,
       "norm_label": ".test_transcribe_writes_timestamped_segments()"
     },
     {
@@ -1050,7 +810,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "tests_test_mvp1_testworkflowscripts_test_tempo_compasso_builds_4_4_bars",
-      "community": 9,
+      "community": 5,
       "norm_label": ".test_tempo_compasso_builds_4_4_bars()"
     },
     {
@@ -1060,7 +820,7 @@
       "source_location": "L160",
       "_origin": "ast",
       "id": "tests_test_mvp1_testworkflowscripts_test_detect_and_classify_drums_on_synthetic_audio",
-      "community": 9,
+      "community": 5,
       "norm_label": ".test_detect_and_classify_drums_on_synthetic_audio()"
     },
     {
@@ -1070,7 +830,7 @@
       "source_location": "L211",
       "_origin": "ast",
       "id": "tests_test_mvp1_testworkflowscripts_test_make_cifra_creates_custom_drum_annotations_above_lyrics",
-      "community": 9,
+      "community": 5,
       "norm_label": ".test_make_cifra_creates_custom_drum_annotations_above_lyrics()"
     },
     {
@@ -1120,7 +880,7 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "tests_test_mvp1_rationale_94",
-      "community": 9,
+      "community": 5,
       "norm_label": "unit tests for each workflow step in src/workflows/."
     },
     {
@@ -1130,7 +890,7 @@
       "source_location": "L212",
       "_origin": "ast",
       "id": "tests_test_mvp1_rationale_212",
-      "community": 9,
+      "community": 5,
       "norm_label": "verifies that <id>-cifra.md is created and contains custom drum annotations abov"
     },
     {
@@ -1142,6 +902,1198 @@
       "id": "tests_test_mvp1_rationale_296",
       "community": 5,
       "norm_label": "tests run.py --dry-run and checks the generated out/<id>/<id>-cifra.md annotatio"
+    },
+    {
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "agents",
+      "community": 13,
+      "norm_label": "agents.md"
+    },
+    {
+      "label": "AGENTS.md \u2014 DrumsCustomChords",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "agents_agents_md_drumscustomchords",
+      "community": 13,
+      "norm_label": "agents.md \u2014 drumscustomchords"
+    },
+    {
+      "label": "Descri\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "agents_descri\u00e7\u00e3o",
+      "community": 13,
+      "norm_label": "descricao"
+    },
+    {
+      "label": "Premissas t\u00e9cnicas",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "agents_premissas_t\u00e9cnicas",
+      "community": 13,
+      "norm_label": "premissas tecnicas"
+    },
+    {
+      "label": "Fluxo de trabalho (Git / OpenSpec)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "agents_fluxo_de_trabalho_git_openspec",
+      "community": 13,
+      "norm_label": "fluxo de trabalho (git / openspec)"
+    },
+    {
+      "label": "Entreg\u00e1vel atual: Cifra de Bateria Customizada (`cifra-bateria-customizada`)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "agents_entreg\u00e1vel_atual_cifra_de_bateria_customizada_cifra_bateria_customizada",
+      "community": 13,
+      "norm_label": "entregavel atual: cifra de bateria customizada (`cifra-bateria-customizada`)"
+    },
+    {
+      "label": "Dicion\u00e1rio (`config/dicionario.yaml`)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "agents_dicion\u00e1rio_config_dicionario_yaml",
+      "community": 13,
+      "norm_label": "dicionario (`config/dicionario.yaml`)"
+    },
+    {
+      "label": "Como executar o orquestrador (`src/run.py`)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "agents_como_executar_o_orquestrador_src_run_py",
+      "community": 13,
+      "norm_label": "como executar o orquestrador (`src/run.py`)"
+    },
+    {
+      "label": "Testes (`tests/`)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "agents_testes_tests",
+      "community": 13,
+      "norm_label": "testes (`tests/`)"
+    },
+    {
+      "label": "Estrutura do projeto",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "agents_estrutura_do_projeto",
+      "community": 13,
+      "norm_label": "estrutura do projeto"
+    },
+    {
+      "label": "musica-bateria-pipeline.md",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline",
+      "community": 9,
+      "norm_label": "musica-bateria-pipeline.md"
+    },
+    {
+      "label": "Pipeline M\u00fasica \u2192 Mapa de Bateria (MVP)",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_pipeline_m\u00fasica_mapa_de_bateria_mvp",
+      "community": 9,
+      "norm_label": "pipeline musica \u2192 mapa de bateria (mvp)"
+    },
+    {
+      "label": "Objetivo",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_objetivo",
+      "community": 9,
+      "norm_label": "objetivo"
+    },
+    {
+      "label": "Premissas",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_premissas",
+      "community": 9,
+      "norm_label": "premissas"
+    },
+    {
+      "label": "Fluxo",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_fluxo",
+      "community": 9,
+      "norm_label": "fluxo"
+    },
+    {
+      "label": "Etapas",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_etapas",
+      "community": 9,
+      "norm_label": "etapas"
+    },
+    {
+      "label": "Dicion\u00e1rio (regras iniciais)",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_dicion\u00e1rio_regras_iniciais",
+      "community": 9,
+      "norm_label": "dicionario (regras iniciais)"
+    },
+    {
+      "label": "Formato de sa\u00edda (`mapa.md`)",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_formato_de_sa\u00edda_mapa_md",
+      "community": 9,
+      "norm_label": "formato de saida (`mapa.md`)"
+    },
+    {
+      "label": "Exemplo Cifra",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_exemplo_cifra",
+      "community": 9,
+      "norm_label": "exemplo cifra"
+    },
+    {
+      "label": "Riscos",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_riscos",
+      "community": 9,
+      "norm_label": "riscos"
+    },
+    {
+      "label": "Marcos",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_marcos",
+      "community": 9,
+      "norm_label": "marcos"
+    },
+    {
+      "label": "Fase 2: Cifra e letra alinhadas ao mapa de bateria",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L100",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_fase_2_cifra_e_letra_alinhadas_ao_mapa_de_bateria",
+      "community": 9,
+      "norm_label": "fase 2: cifra e letra alinhadas ao mapa de bateria"
+    },
+    {
+      "label": "Objetivo",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L102",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_objetivo_102",
+      "community": 9,
+      "norm_label": "objetivo"
+    },
+    {
+      "label": "Fluxo",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L106",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_fluxo_106",
+      "community": 9,
+      "norm_label": "fluxo"
+    },
+    {
+      "label": "Etapas",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_etapas_122",
+      "community": 9,
+      "norm_label": "etapas"
+    },
+    {
+      "label": "Detalhes",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L133",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_detalhes",
+      "community": 9,
+      "norm_label": "detalhes"
+    },
+    {
+      "label": "Formato de sa\u00edda (`cifra_bateria.md`)",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L142",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_formato_de_sa\u00edda_cifra_bateria_md",
+      "community": 9,
+      "norm_label": "formato de saida (`cifra_bateria.md`)"
+    },
+    {
+      "label": "Riscos",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_riscos_153",
+      "community": 9,
+      "norm_label": "riscos"
+    },
+    {
+      "label": "Marcos",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L161",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_marcos_161",
+      "community": 9,
+      "norm_label": "marcos"
+    },
+    {
+      "label": "Perguntas em aberto da fase 2",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L170",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_perguntas_em_aberto_da_fase_2",
+      "community": 9,
+      "norm_label": "perguntas em aberto da fase 2"
+    },
+    {
+      "label": "Perguntas em aberto",
+      "file_type": "document",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L176",
+      "_origin": "ast",
+      "id": "docs_musica_bateria_pipeline_perguntas_em_aberto",
+      "community": 9,
+      "norm_label": "perguntas em aberto"
+    },
+    {
+      "label": "design.md",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/design.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_design",
+      "community": 19,
+      "norm_label": "design.md"
+    },
+    {
+      "label": "Decis\u00f5es Arquiteturais",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/design.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_design_decis\u00f5es_arquiteturais",
+      "community": 19,
+      "norm_label": "decisoes arquiteturais"
+    },
+    {
+      "label": "Exemplo de Sa\u00edda (`out/<id>/<id>-cifra.md`)",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/design.md",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_design_exemplo_de_sa\u00edda_out_id_id_cifra_md",
+      "community": 19,
+      "norm_label": "exemplo de saida (`out/<id>/<id>-cifra.md`)"
+    },
+    {
+      "label": "Riscos e Mitiga\u00e7\u00f5es",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/design.md",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_design_riscos_e_mitiga\u00e7\u00f5es",
+      "community": 19,
+      "norm_label": "riscos e mitigacoes"
+    },
+    {
+      "label": "proposal.md",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/proposal.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal",
+      "community": 15,
+      "norm_label": "proposal.md"
+    },
+    {
+      "label": "Why",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/proposal.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal_why",
+      "community": 15,
+      "norm_label": "why"
+    },
+    {
+      "label": "What Changes",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/proposal.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal_what_changes",
+      "community": 15,
+      "norm_label": "what changes"
+    },
+    {
+      "label": "Capabilities",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/proposal.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal_capabilities",
+      "community": 15,
+      "norm_label": "capabilities"
+    },
+    {
+      "label": "New Capabilities",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/proposal.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal_new_capabilities",
+      "community": 15,
+      "norm_label": "new capabilities"
+    },
+    {
+      "label": "Modified Capabilities",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/proposal.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal_modified_capabilities",
+      "community": 15,
+      "norm_label": "modified capabilities"
+    },
+    {
+      "label": "Impact",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/proposal.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal_impact",
+      "community": 15,
+      "norm_label": "impact"
+    },
+    {
+      "label": "spec.md",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec",
+      "community": 11,
+      "norm_label": "spec.md"
+    },
+    {
+      "label": "ADDED Requirements",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_added_requirements",
+      "community": 11,
+      "norm_label": "added requirements"
+    },
+    {
+      "label": "Requirement: Separa\u00e7\u00e3o de bateria e vocal",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_requirement_separa\u00e7\u00e3o_de_bateria_e_vocal",
+      "community": 11,
+      "norm_label": "requirement: separacao de bateria e vocal"
+    },
+    {
+      "label": "Scenario: Extra\u00e7\u00e3o de stems com cache",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_scenario_extra\u00e7\u00e3o_de_stems_com_cache",
+      "community": 11,
+      "norm_label": "scenario: extracao de stems com cache"
+    },
+    {
+      "label": "Requirement: Detec\u00e7\u00e3o e quantiza\u00e7\u00e3o de golpes de bateria",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_requirement_detec\u00e7\u00e3o_e_quantiza\u00e7\u00e3o_de_golpes_de_bateria",
+      "community": 11,
+      "norm_label": "requirement: deteccao e quantizacao de golpes de bateria"
+    },
+    {
+      "label": "Scenario: Quantiza\u00e7\u00e3o por compasso",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_scenario_quantiza\u00e7\u00e3o_por_compasso",
+      "community": 11,
+      "norm_label": "scenario: quantizacao por compasso"
+    },
+    {
+      "label": "Requirement: Classifica\u00e7\u00e3o por dicion\u00e1rio de bateria",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_requirement_classifica\u00e7\u00e3o_por_dicion\u00e1rio_de_bateria",
+      "community": 11,
+      "norm_label": "requirement: classificacao por dicionario de bateria"
+    },
+    {
+      "label": "Scenario: Mudan\u00e7a de padr\u00e3o e sil\u00eancio",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_scenario_mudan\u00e7a_de_padr\u00e3o_e_sil\u00eancio",
+      "community": 11,
+      "norm_label": "scenario: mudanca de padrao e silencio"
+    },
+    {
+      "label": "Requirement: Gera\u00e7\u00e3o da cifra de bateria customizada com revis\u00e3o Gemma",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_requirement_gera\u00e7\u00e3o_da_cifra_de_bateria_customizada_com_revis\u00e3o_gemma",
+      "community": 11,
+      "norm_label": "requirement: geracao da cifra de bateria customizada com revisao gemma"
+    },
+    {
+      "label": "Scenario: Arquivo final com nome da m\u00fasica + `-cifra.md`",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_scenario_arquivo_final_com_nome_da_m\u00fasica_cifra_md",
+      "community": 11,
+      "norm_label": "scenario: arquivo final com nome da musica + `-cifra.md`"
+    },
+    {
+      "label": "Requirement: Teste unit\u00e1rio de valida\u00e7\u00e3o das anota\u00e7\u00f5es no arquivo final",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_requirement_teste_unit\u00e1rio_de_valida\u00e7\u00e3o_das_anota\u00e7\u00f5es_no_arquivo_final",
+      "community": 11,
+      "norm_label": "requirement: teste unitario de validacao das anotacoes no arquivo final"
+    },
+    {
+      "label": "Scenario: Verifica\u00e7\u00e3o de presen\u00e7a de anota\u00e7\u00f5es de bateria na cifra gerada",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_scenario_verifica\u00e7\u00e3o_de_presen\u00e7a_de_anota\u00e7\u00f5es_de_bateria_na_cifra_gerada",
+      "community": 11,
+      "norm_label": "scenario: verificacao de presenca de anotacoes de bateria na cifra gerada"
+    },
+    {
+      "label": "tasks.md",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/tasks.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_tasks",
+      "community": 16,
+      "norm_label": "tasks.md"
+    },
+    {
+      "label": "1. Configura\u00e7\u00e3o e Dicion\u00e1rio",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/tasks.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_tasks_1_configura\u00e7\u00e3o_e_dicion\u00e1rio",
+      "community": 16,
+      "norm_label": "1. configuracao e dicionario"
+    },
+    {
+      "label": "2. Separa\u00e7\u00e3o de Stems e Transcri\u00e7\u00e3o com Word Timestamps",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/tasks.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_tasks_2_separa\u00e7\u00e3o_de_stems_e_transcri\u00e7\u00e3o_com_word_timestamps",
+      "community": 16,
+      "norm_label": "2. separacao de stems e transcricao com word timestamps"
+    },
+    {
+      "label": "3. Detec\u00e7\u00e3o, Quantiza\u00e7\u00e3o e Classifica\u00e7\u00e3o de Bateria",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/tasks.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_tasks_3_detec\u00e7\u00e3o_quantiza\u00e7\u00e3o_e_classifica\u00e7\u00e3o_de_bateria",
+      "community": 16,
+      "norm_label": "3. deteccao, quantizacao e classificacao de bateria"
+    },
+    {
+      "label": "4. Montagem da Cifra Customizada e Integra\u00e7\u00e3o Gemma",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/tasks.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_tasks_4_montagem_da_cifra_customizada_e_integra\u00e7\u00e3o_gemma",
+      "community": 16,
+      "norm_label": "4. montagem da cifra customizada e integracao gemma"
+    },
+    {
+      "label": "5. Testes e Documenta\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/tasks.md",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_tasks_5_testes_e_documenta\u00e7\u00e3o",
+      "community": 16,
+      "norm_label": "5. testes e documentacao"
+    },
+    {
+      "label": "design.md",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/design.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_design",
+      "community": 20,
+      "norm_label": "design.md"
+    },
+    {
+      "label": "Decis\u00f5es",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/design.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_design_decis\u00f5es",
+      "community": 20,
+      "norm_label": "decisoes"
+    },
+    {
+      "label": "Formato de `cifra.md`",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/design.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_design_formato_de_cifra_md",
+      "community": 20,
+      "norm_label": "formato de `cifra.md`"
+    },
+    {
+      "label": "Riscos",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/design.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_design_riscos",
+      "community": 20,
+      "norm_label": "riscos"
+    },
+    {
+      "label": "proposal.md",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_proposal",
+      "community": 17,
+      "norm_label": "proposal.md"
+    },
+    {
+      "label": "Why",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_proposal_why",
+      "community": 17,
+      "norm_label": "why"
+    },
+    {
+      "label": "What Changes",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_proposal_what_changes",
+      "community": 17,
+      "norm_label": "what changes"
+    },
+    {
+      "label": "Capabilities",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_proposal_capabilities",
+      "community": 17,
+      "norm_label": "capabilities"
+    },
+    {
+      "label": "New Capabilities",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_proposal_new_capabilities",
+      "community": 17,
+      "norm_label": "new capabilities"
+    },
+    {
+      "label": "Impact",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_proposal_impact",
+      "community": 17,
+      "norm_label": "impact"
+    },
+    {
+      "label": "spec.md",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec",
+      "community": 14,
+      "norm_label": "spec.md"
+    },
+    {
+      "label": "ADDED Requirements",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_added_requirements",
+      "community": 14,
+      "norm_label": "added requirements"
+    },
+    {
+      "label": "Requirement: Separa\u00e7\u00e3o de vocal",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_requirement_separa\u00e7\u00e3o_de_vocal",
+      "community": 14,
+      "norm_label": "requirement: separacao de vocal"
+    },
+    {
+      "label": "Scenario: MP3 v\u00e1lido",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_scenario_mp3_v\u00e1lido",
+      "community": 14,
+      "norm_label": "scenario: mp3 valido"
+    },
+    {
+      "label": "Requirement: Transcri\u00e7\u00e3o da letra",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_requirement_transcri\u00e7\u00e3o_da_letra",
+      "community": 14,
+      "norm_label": "requirement: transcricao da letra"
+    },
+    {
+      "label": "Scenario: Idioma informado",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_scenario_idioma_informado",
+      "community": 14,
+      "norm_label": "scenario: idioma informado"
+    },
+    {
+      "label": "Requirement: Tempo-compasso",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_requirement_tempo_compasso",
+      "community": 14,
+      "norm_label": "requirement: tempo-compasso"
+    },
+    {
+      "label": "Scenario: M\u00fasica em 4/4",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_scenario_m\u00fasica_em_4_4",
+      "community": 14,
+      "norm_label": "scenario: musica em 4/4"
+    },
+    {
+      "label": "Requirement: Primeiro arquivo de cifra",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_requirement_primeiro_arquivo_de_cifra",
+      "community": 14,
+      "norm_label": "requirement: primeiro arquivo de cifra"
+    },
+    {
+      "label": "Scenario: Letra e compassos dispon\u00edveis",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_scenario_letra_e_compassos_dispon\u00edveis",
+      "community": 14,
+      "norm_label": "scenario: letra e compassos disponiveis"
+    },
+    {
+      "label": "tasks.md",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/tasks.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_tasks",
+      "community": 18,
+      "norm_label": "tasks.md"
+    },
+    {
+      "label": "1. Setup",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/tasks.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_tasks_1_setup",
+      "community": 18,
+      "norm_label": "1. setup"
+    },
+    {
+      "label": "2. Vocal",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/tasks.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_tasks_2_vocal",
+      "community": 18,
+      "norm_label": "2. vocal"
+    },
+    {
+      "label": "3. Letra",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/tasks.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_tasks_3_letra",
+      "community": 18,
+      "norm_label": "3. letra"
+    },
+    {
+      "label": "4. Tempo-compasso",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/tasks.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_tasks_4_tempo_compasso",
+      "community": 18,
+      "norm_label": "4. tempo-compasso"
+    },
+    {
+      "label": "5. Cifra e Testes",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/tasks.md",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_tasks_5_cifra_e_testes",
+      "community": 18,
+      "norm_label": "5. cifra e testes"
+    },
+    {
+      "label": "spec.md",
+      "file_type": "document",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_specs_cifra_bateria_customizada_spec",
+      "community": 10,
+      "norm_label": "spec.md"
+    },
+    {
+      "label": "Cifra de Bateria Customizada Specification",
+      "file_type": "document",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_specs_cifra_bateria_customizada_spec_cifra_de_bateria_customizada_specification",
+      "community": 10,
+      "norm_label": "cifra de bateria customizada specification"
+    },
+    {
+      "label": "Requirements",
+      "file_type": "document",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "openspec_specs_cifra_bateria_customizada_spec_requirements",
+      "community": 10,
+      "norm_label": "requirements"
+    },
+    {
+      "label": "Requirement: Separa\u00e7\u00e3o de bateria e vocal",
+      "file_type": "document",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "openspec_specs_cifra_bateria_customizada_spec_requirement_separa\u00e7\u00e3o_de_bateria_e_vocal",
+      "community": 10,
+      "norm_label": "requirement: separacao de bateria e vocal"
+    },
+    {
+      "label": "Scenario: Extra\u00e7\u00e3o de stems com cache",
+      "file_type": "document",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "openspec_specs_cifra_bateria_customizada_spec_scenario_extra\u00e7\u00e3o_de_stems_com_cache",
+      "community": 10,
+      "norm_label": "scenario: extracao de stems com cache"
+    },
+    {
+      "label": "Requirement: Detec\u00e7\u00e3o e quantiza\u00e7\u00e3o de golpes de bateria",
+      "file_type": "document",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "openspec_specs_cifra_bateria_customizada_spec_requirement_detec\u00e7\u00e3o_e_quantiza\u00e7\u00e3o_de_golpes_de_bateria",
+      "community": 10,
+      "norm_label": "requirement: deteccao e quantizacao de golpes de bateria"
+    },
+    {
+      "label": "Scenario: Quantiza\u00e7\u00e3o por compasso",
+      "file_type": "document",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "openspec_specs_cifra_bateria_customizada_spec_scenario_quantiza\u00e7\u00e3o_por_compasso",
+      "community": 10,
+      "norm_label": "scenario: quantizacao por compasso"
+    },
+    {
+      "label": "Requirement: Classifica\u00e7\u00e3o por dicion\u00e1rio de bateria",
+      "file_type": "document",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "openspec_specs_cifra_bateria_customizada_spec_requirement_classifica\u00e7\u00e3o_por_dicion\u00e1rio_de_bateria",
+      "community": 10,
+      "norm_label": "requirement: classificacao por dicionario de bateria"
+    },
+    {
+      "label": "Scenario: Mudan\u00e7a de padr\u00e3o e sil\u00eancio",
+      "file_type": "document",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "openspec_specs_cifra_bateria_customizada_spec_scenario_mudan\u00e7a_de_padr\u00e3o_e_sil\u00eancio",
+      "community": 10,
+      "norm_label": "scenario: mudanca de padrao e silencio"
+    },
+    {
+      "label": "Requirement: Gera\u00e7\u00e3o da cifra de bateria customizada com revis\u00e3o Gemma",
+      "file_type": "document",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "openspec_specs_cifra_bateria_customizada_spec_requirement_gera\u00e7\u00e3o_da_cifra_de_bateria_customizada_com_revis\u00e3o_gemma",
+      "community": 10,
+      "norm_label": "requirement: geracao da cifra de bateria customizada com revisao gemma"
+    },
+    {
+      "label": "Scenario: Arquivo final com nome da m\u00fasica + `-cifra.md`",
+      "file_type": "document",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "openspec_specs_cifra_bateria_customizada_spec_scenario_arquivo_final_com_nome_da_m\u00fasica_cifra_md",
+      "community": 10,
+      "norm_label": "scenario: arquivo final com nome da musica + `-cifra.md`"
+    },
+    {
+      "label": "Requirement: Teste unit\u00e1rio de valida\u00e7\u00e3o das anota\u00e7\u00f5es no arquivo final",
+      "file_type": "document",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "openspec_specs_cifra_bateria_customizada_spec_requirement_teste_unit\u00e1rio_de_valida\u00e7\u00e3o_das_anota\u00e7\u00f5es_no_arquivo_final",
+      "community": 10,
+      "norm_label": "requirement: teste unitario de validacao das anotacoes no arquivo final"
+    },
+    {
+      "label": "Scenario: Verifica\u00e7\u00e3o de presen\u00e7a de anota\u00e7\u00f5es de bateria na cifra gerada",
+      "file_type": "document",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "openspec_specs_cifra_bateria_customizada_spec_scenario_verifica\u00e7\u00e3o_de_presen\u00e7a_de_anota\u00e7\u00f5es_de_bateria_na_cifra_gerada",
+      "community": 10,
+      "norm_label": "scenario: verificacao de presenca de anotacoes de bateria na cifra gerada"
+    },
+    {
+      "label": "spec.md",
+      "file_type": "document",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_specs_mvp1_spec",
+      "community": 12,
+      "norm_label": "spec.md"
+    },
+    {
+      "label": "MVP 1 Specification",
+      "file_type": "document",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_specs_mvp1_spec_mvp_1_specification",
+      "community": 12,
+      "norm_label": "mvp 1 specification"
+    },
+    {
+      "label": "Requirements",
+      "file_type": "document",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "openspec_specs_mvp1_spec_requirements",
+      "community": 12,
+      "norm_label": "requirements"
+    },
+    {
+      "label": "Requirement: Separa\u00e7\u00e3o de vocal",
+      "file_type": "document",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "openspec_specs_mvp1_spec_requirement_separa\u00e7\u00e3o_de_vocal",
+      "community": 12,
+      "norm_label": "requirement: separacao de vocal"
+    },
+    {
+      "label": "Scenario: MP3 v\u00e1lido",
+      "file_type": "document",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "openspec_specs_mvp1_spec_scenario_mp3_v\u00e1lido",
+      "community": 12,
+      "norm_label": "scenario: mp3 valido"
+    },
+    {
+      "label": "Requirement: Transcri\u00e7\u00e3o da letra",
+      "file_type": "document",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "openspec_specs_mvp1_spec_requirement_transcri\u00e7\u00e3o_da_letra",
+      "community": 12,
+      "norm_label": "requirement: transcricao da letra"
+    },
+    {
+      "label": "Scenario: Idioma informado",
+      "file_type": "document",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "openspec_specs_mvp1_spec_scenario_idioma_informado",
+      "community": 12,
+      "norm_label": "scenario: idioma informado"
+    },
+    {
+      "label": "Requirement: Tempo-compasso",
+      "file_type": "document",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "openspec_specs_mvp1_spec_requirement_tempo_compasso",
+      "community": 12,
+      "norm_label": "requirement: tempo-compasso"
+    },
+    {
+      "label": "Scenario: M\u00fasica em 4/4",
+      "file_type": "document",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "openspec_specs_mvp1_spec_scenario_m\u00fasica_em_4_4",
+      "community": 12,
+      "norm_label": "scenario: musica em 4/4"
+    },
+    {
+      "label": "Requirement: Primeiro arquivo de cifra",
+      "file_type": "document",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "openspec_specs_mvp1_spec_requirement_primeiro_arquivo_de_cifra",
+      "community": 12,
+      "norm_label": "requirement: primeiro arquivo de cifra"
+    },
+    {
+      "label": "Scenario: Letra e compassos dispon\u00edveis",
+      "file_type": "document",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "openspec_specs_mvp1_spec_scenario_letra_e_compassos_dispon\u00edveis",
+      "community": 12,
+      "norm_label": "scenario: letra e compassos disponiveis"
+    },
+    {
+      "label": "DrumsCustomChords project",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 25,
+      "norm_label": "drumscustomchords project",
+      "id": "drumscustomchords_agents_project"
+    },
+    {
+      "label": "Technical premises (local Python, cache, sequential VRAM, timing from code not LLM)",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Timing comes from code to avoid LLM hallucination; Demucs/Whisper/Gemma run in sequence due to 12GB VRAM",
+      "community": 26,
+      "norm_label": "technical premises (local python, cache, sequential vram, timing from code not llm)",
+      "id": "drumscustomchords_agents_technical_premises"
+    },
+    {
+      "label": "Phase 1 - Drum map",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 22,
+      "norm_label": "phase 1 - drum map",
+      "id": "drumscustomchords_agents_phase1"
+    },
+    {
+      "label": "Phase 2 - Chord sheet and lyrics aligned to map",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 23,
+      "norm_label": "phase 2 - chord sheet and lyrics aligned to map",
+      "id": "drumscustomchords_agents_phase2"
+    },
+    {
+      "label": "Phase 3 - PDF output, OCR (TBD)",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 24,
+      "norm_label": "phase 3 - pdf output, ocr (tbd)",
+      "id": "drumscustomchords_agents_phase3"
+    },
+    {
+      "label": "Git/OpenSpec workflow (feature/mvp1, no PRs)",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "git/openspec workflow (feature/mvp1, no prs)",
+      "id": "drumscustomchords_agents_git_workflow"
+    },
+    {
+      "label": "MVP 1 deliverable",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 21,
+      "norm_label": "mvp 1 deliverable",
+      "id": "drumscustomchords_agents_mvp1"
     }
   ],
   "links": [
@@ -1151,9 +2103,9 @@
       "source_file": "src/run.py",
       "source_location": "L44",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run",
-      "target": "src_run_file_sig"
+      "target": "src_run_file_sig",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1161,9 +2113,9 @@
       "source_file": "src/run.py",
       "source_location": "L49",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run",
-      "target": "src_run_load_json"
+      "target": "src_run_load_json",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1171,9 +2123,9 @@
       "source_file": "src/run.py",
       "source_location": "L138",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run",
-      "target": "src_run_main"
+      "target": "src_run_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1181,9 +2133,9 @@
       "source_file": "src/run.py",
       "source_location": "L69",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run",
-      "target": "src_run_nonempty"
+      "target": "src_run_nonempty",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1191,9 +2143,9 @@
       "source_file": "src/run.py",
       "source_location": "L32",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run",
-      "target": "src_run_now"
+      "target": "src_run_now",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1201,9 +2153,9 @@
       "source_file": "src/run.py",
       "source_location": "L74",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run",
-      "target": "src_run_parse_overrides"
+      "target": "src_run_parse_overrides",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1211,9 +2163,9 @@
       "source_file": "src/run.py",
       "source_location": "L90",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run",
-      "target": "src_run_preflight"
+      "target": "src_run_preflight",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1221,9 +2173,9 @@
       "source_file": "src/run.py",
       "source_location": "L106",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run",
-      "target": "src_run_run_step"
+      "target": "src_run_run_step",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1231,9 +2183,9 @@
       "source_file": "src/run.py",
       "source_location": "L56",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run",
-      "target": "src_run_save_json_atomic"
+      "target": "src_run_save_json_atomic",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1241,9 +2193,9 @@
       "source_file": "src/run.py",
       "source_location": "L36",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run",
-      "target": "src_run_sha"
+      "target": "src_run_sha",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1251,9 +2203,9 @@
       "source_file": "src/run.py",
       "source_location": "L64",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run",
-      "target": "src_run_tmp_path"
+      "target": "src_run_tmp_path",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1273,9 +2225,9 @@
       "source_file": "src/run.py",
       "source_location": "L214",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run_main",
-      "target": "src_run_now"
+      "target": "src_run_now",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1284,9 +2236,9 @@
       "source_file": "src/run.py",
       "source_location": "L120",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run_run_step",
-      "target": "src_run_now"
+      "target": "src_run_now",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1295,9 +2247,9 @@
       "source_file": "src/run.py",
       "source_location": "L190",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run_main",
-      "target": "src_run_sha"
+      "target": "src_run_sha",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1306,9 +2258,9 @@
       "source_file": "src/run.py",
       "source_location": "L179",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run_main",
-      "target": "src_run_file_sig"
+      "target": "src_run_file_sig",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1317,9 +2269,9 @@
       "source_file": "src/run.py",
       "source_location": "L147",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run_main",
-      "target": "src_run_load_json"
+      "target": "src_run_load_json",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1328,9 +2280,9 @@
       "source_file": "src/run.py",
       "source_location": "L224",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run_main",
-      "target": "src_run_save_json_atomic"
+      "target": "src_run_save_json_atomic",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1339,9 +2291,9 @@
       "source_file": "src/run.py",
       "source_location": "L107",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run_run_step",
-      "target": "src_run_tmp_path"
+      "target": "src_run_tmp_path",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1350,9 +2302,9 @@
       "source_file": "src/run.py",
       "source_location": "L198",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run_main",
-      "target": "src_run_nonempty"
+      "target": "src_run_nonempty",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1361,9 +2313,9 @@
       "source_file": "src/run.py",
       "source_location": "L127",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run_run_step",
-      "target": "src_run_nonempty"
+      "target": "src_run_nonempty",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1372,9 +2324,9 @@
       "source_file": "src/run.py",
       "source_location": "L174",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run_main",
-      "target": "src_run_parse_overrides"
+      "target": "src_run_parse_overrides",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1383,9 +2335,9 @@
       "source_file": "src/run.py",
       "source_location": "L163",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run_main",
-      "target": "src_run_preflight"
+      "target": "src_run_preflight",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1394,199 +2346,9 @@
       "source_file": "src/run.py",
       "source_location": "L227",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_run_main",
-      "target": "src_run_run_step"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_agents_project",
-      "target": "drumscustomchords_agents_git_workflow"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_agents_project",
-      "target": "drumscustomchords_agents_phase1"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_agents_project",
-      "target": "drumscustomchords_agents_phase2"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_agents_project",
-      "target": "drumscustomchords_agents_phase3"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_agents_project",
-      "target": "drumscustomchords_agents_technical_premises"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_agents_mvp1",
-      "target": "drumscustomchords_agents_phase2"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/proposal.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_proposal_mvp1",
-      "target": "drumscustomchords_agents_mvp1"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/design.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_design_decisions",
-      "target": "drumscustomchords_design_cifra_format"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/design.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_design_decisions",
-      "target": "drumscustomchords_design_risks"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/design.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_design_decisions",
-      "target": "drumscustomchords_proposal_mvp1"
-    },
-    {
-      "relation": "implements",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/design.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_design_cifra_format",
-      "target": "drumscustomchords_spec_cifra_output"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/proposal.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_proposal_mvp1",
-      "target": "drumscustomchords_spec_cifra_output"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/proposal.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_proposal_mvp1",
-      "target": "drumscustomchords_spec_lyrics_transcription"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/proposal.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_proposal_mvp1",
-      "target": "drumscustomchords_spec_tempo_bars"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/proposal.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_proposal_mvp1",
-      "target": "drumscustomchords_spec_vocal_separation"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/tasks.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_tasks_plan",
-      "target": "drumscustomchords_proposal_mvp1"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_spec_vocal_separation",
-      "target": "drumscustomchords_spec_lyrics_transcription"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_spec_lyrics_transcription",
-      "target": "drumscustomchords_spec_cifra_output"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "drumscustomchords_spec_tempo_bars",
-      "target": "drumscustomchords_spec_cifra_output"
+      "target": "src_run_run_step",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2953,22 +3715,988 @@
       "source": "tests_test_mvp1_testorchestratorandgeneratedoutput",
       "target": "tests_test_mvp1_testorchestratorandgeneratedoutput_test_real_generated_cifra_file_has_annotations_when_present",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "agents",
+      "target": "agents_agents_md_drumscustomchords",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "agents_agents_md_drumscustomchords",
+      "target": "agents_como_executar_o_orquestrador_src_run_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "agents_agents_md_drumscustomchords",
+      "target": "agents_descri\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "agents_agents_md_drumscustomchords",
+      "target": "agents_dicion\u00e1rio_config_dicionario_yaml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "agents_agents_md_drumscustomchords",
+      "target": "agents_entreg\u00e1vel_atual_cifra_de_bateria_customizada_cifra_bateria_customizada",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "agents_agents_md_drumscustomchords",
+      "target": "agents_estrutura_do_projeto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "agents_agents_md_drumscustomchords",
+      "target": "agents_fluxo_de_trabalho_git_openspec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "agents_agents_md_drumscustomchords",
+      "target": "agents_premissas_t\u00e9cnicas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "agents_agents_md_drumscustomchords",
+      "target": "agents_testes_tests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline",
+      "target": "docs_musica_bateria_pipeline_pipeline_m\u00fasica_mapa_de_bateria_mvp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_pipeline_m\u00fasica_mapa_de_bateria_mvp",
+      "target": "docs_musica_bateria_pipeline_dicion\u00e1rio_regras_iniciais",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_pipeline_m\u00fasica_mapa_de_bateria_mvp",
+      "target": "docs_musica_bateria_pipeline_etapas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_pipeline_m\u00fasica_mapa_de_bateria_mvp",
+      "target": "docs_musica_bateria_pipeline_exemplo_cifra",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_pipeline_m\u00fasica_mapa_de_bateria_mvp",
+      "target": "docs_musica_bateria_pipeline_fase_2_cifra_e_letra_alinhadas_ao_mapa_de_bateria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_pipeline_m\u00fasica_mapa_de_bateria_mvp",
+      "target": "docs_musica_bateria_pipeline_fluxo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_pipeline_m\u00fasica_mapa_de_bateria_mvp",
+      "target": "docs_musica_bateria_pipeline_formato_de_sa\u00edda_mapa_md",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_pipeline_m\u00fasica_mapa_de_bateria_mvp",
+      "target": "docs_musica_bateria_pipeline_marcos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_pipeline_m\u00fasica_mapa_de_bateria_mvp",
+      "target": "docs_musica_bateria_pipeline_objetivo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L176",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_pipeline_m\u00fasica_mapa_de_bateria_mvp",
+      "target": "docs_musica_bateria_pipeline_perguntas_em_aberto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_pipeline_m\u00fasica_mapa_de_bateria_mvp",
+      "target": "docs_musica_bateria_pipeline_premissas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_pipeline_m\u00fasica_mapa_de_bateria_mvp",
+      "target": "docs_musica_bateria_pipeline_riscos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L133",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_fase_2_cifra_e_letra_alinhadas_ao_mapa_de_bateria",
+      "target": "docs_musica_bateria_pipeline_detalhes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_fase_2_cifra_e_letra_alinhadas_ao_mapa_de_bateria",
+      "target": "docs_musica_bateria_pipeline_etapas_122",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_fase_2_cifra_e_letra_alinhadas_ao_mapa_de_bateria",
+      "target": "docs_musica_bateria_pipeline_fluxo_106",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_fase_2_cifra_e_letra_alinhadas_ao_mapa_de_bateria",
+      "target": "docs_musica_bateria_pipeline_formato_de_sa\u00edda_cifra_bateria_md",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L161",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_fase_2_cifra_e_letra_alinhadas_ao_mapa_de_bateria",
+      "target": "docs_musica_bateria_pipeline_marcos_161",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_fase_2_cifra_e_letra_alinhadas_ao_mapa_de_bateria",
+      "target": "docs_musica_bateria_pipeline_objetivo_102",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_fase_2_cifra_e_letra_alinhadas_ao_mapa_de_bateria",
+      "target": "docs_musica_bateria_pipeline_perguntas_em_aberto_da_fase_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/musica-bateria-pipeline.md",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "docs_musica_bateria_pipeline_fase_2_cifra_e_letra_alinhadas_ao_mapa_de_bateria",
+      "target": "docs_musica_bateria_pipeline_riscos_153",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/design.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_design",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_design_decis\u00f5es_arquiteturais",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/design.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_design",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_design_exemplo_de_sa\u00edda_out_id_id_cifra_md",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/design.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_design",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_design_riscos_e_mitiga\u00e7\u00f5es",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/proposal.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal_capabilities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/proposal.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal_impact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/proposal.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal_what_changes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/proposal.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal_why",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/proposal.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal_capabilities",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal_modified_capabilities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/proposal.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal_capabilities",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_proposal_new_capabilities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_added_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_requirement_classifica\u00e7\u00e3o_por_dicion\u00e1rio_de_bateria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_requirement_detec\u00e7\u00e3o_e_quantiza\u00e7\u00e3o_de_golpes_de_bateria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_requirement_gera\u00e7\u00e3o_da_cifra_de_bateria_customizada_com_revis\u00e3o_gemma",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_requirement_separa\u00e7\u00e3o_de_bateria_e_vocal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_requirement_teste_unit\u00e1rio_de_valida\u00e7\u00e3o_das_anota\u00e7\u00f5es_no_arquivo_final",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_requirement_separa\u00e7\u00e3o_de_bateria_e_vocal",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_scenario_extra\u00e7\u00e3o_de_stems_com_cache",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_requirement_detec\u00e7\u00e3o_e_quantiza\u00e7\u00e3o_de_golpes_de_bateria",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_scenario_quantiza\u00e7\u00e3o_por_compasso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_requirement_classifica\u00e7\u00e3o_por_dicion\u00e1rio_de_bateria",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_scenario_mudan\u00e7a_de_padr\u00e3o_e_sil\u00eancio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_requirement_gera\u00e7\u00e3o_da_cifra_de_bateria_customizada_com_revis\u00e3o_gemma",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_scenario_arquivo_final_com_nome_da_m\u00fasica_cifra_md",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_requirement_teste_unit\u00e1rio_de_valida\u00e7\u00e3o_das_anota\u00e7\u00f5es_no_arquivo_final",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_specs_cifra_bateria_customizada_spec_scenario_verifica\u00e7\u00e3o_de_presen\u00e7a_de_anota\u00e7\u00f5es_de_bateria_na_cifra_gerada",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/tasks.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_tasks",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_tasks_1_configura\u00e7\u00e3o_e_dicion\u00e1rio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/tasks.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_tasks",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_tasks_2_separa\u00e7\u00e3o_de_stems_e_transcri\u00e7\u00e3o_com_word_timestamps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/tasks.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_tasks",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_tasks_3_detec\u00e7\u00e3o_quantiza\u00e7\u00e3o_e_classifica\u00e7\u00e3o_de_bateria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/tasks.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_tasks",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_tasks_4_montagem_da_cifra_customizada_e_integra\u00e7\u00e3o_gemma",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-cifra-bateria-customizada/tasks.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_tasks",
+      "target": "openspec_changes_archive_2026_11_12_cifra_bateria_customizada_tasks_5_testes_e_documenta\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/design.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_design",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_design_decis\u00f5es",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/design.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_design",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_design_formato_de_cifra_md",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/design.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_design",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_design_riscos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_proposal",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_proposal_capabilities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_proposal",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_proposal_impact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_proposal",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_proposal_what_changes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_proposal",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_proposal_why",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_proposal_capabilities",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_proposal_new_capabilities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_added_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_requirement_primeiro_arquivo_de_cifra",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_requirement_separa\u00e7\u00e3o_de_vocal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_requirement_tempo_compasso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_requirement_transcri\u00e7\u00e3o_da_letra",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_requirement_separa\u00e7\u00e3o_de_vocal",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_scenario_mp3_v\u00e1lido",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_requirement_transcri\u00e7\u00e3o_da_letra",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_scenario_idioma_informado",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_requirement_tempo_compasso",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_scenario_m\u00fasica_em_4_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_requirement_primeiro_arquivo_de_cifra",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_specs_mvp1_spec_scenario_letra_e_compassos_dispon\u00edveis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/tasks.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_tasks",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_tasks_1_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/tasks.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_tasks",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_tasks_2_vocal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/tasks.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_tasks",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_tasks_3_letra",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/tasks.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_tasks",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_tasks_4_tempo_compasso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-11-12-mvp1-vocal-letra-cifra/tasks.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_tasks",
+      "target": "openspec_changes_archive_2026_11_12_mvp1_vocal_letra_cifra_tasks_5_cifra_e_testes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "openspec_specs_cifra_bateria_customizada_spec",
+      "target": "openspec_specs_cifra_bateria_customizada_spec_cifra_de_bateria_customizada_specification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "openspec_specs_cifra_bateria_customizada_spec_cifra_de_bateria_customizada_specification",
+      "target": "openspec_specs_cifra_bateria_customizada_spec_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "openspec_specs_cifra_bateria_customizada_spec_requirements",
+      "target": "openspec_specs_cifra_bateria_customizada_spec_requirement_classifica\u00e7\u00e3o_por_dicion\u00e1rio_de_bateria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "openspec_specs_cifra_bateria_customizada_spec_requirements",
+      "target": "openspec_specs_cifra_bateria_customizada_spec_requirement_detec\u00e7\u00e3o_e_quantiza\u00e7\u00e3o_de_golpes_de_bateria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "openspec_specs_cifra_bateria_customizada_spec_requirements",
+      "target": "openspec_specs_cifra_bateria_customizada_spec_requirement_gera\u00e7\u00e3o_da_cifra_de_bateria_customizada_com_revis\u00e3o_gemma",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "openspec_specs_cifra_bateria_customizada_spec_requirements",
+      "target": "openspec_specs_cifra_bateria_customizada_spec_requirement_separa\u00e7\u00e3o_de_bateria_e_vocal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "openspec_specs_cifra_bateria_customizada_spec_requirements",
+      "target": "openspec_specs_cifra_bateria_customizada_spec_requirement_teste_unit\u00e1rio_de_valida\u00e7\u00e3o_das_anota\u00e7\u00f5es_no_arquivo_final",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "openspec_specs_cifra_bateria_customizada_spec_requirement_separa\u00e7\u00e3o_de_bateria_e_vocal",
+      "target": "openspec_specs_cifra_bateria_customizada_spec_scenario_extra\u00e7\u00e3o_de_stems_com_cache",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "openspec_specs_cifra_bateria_customizada_spec_requirement_detec\u00e7\u00e3o_e_quantiza\u00e7\u00e3o_de_golpes_de_bateria",
+      "target": "openspec_specs_cifra_bateria_customizada_spec_scenario_quantiza\u00e7\u00e3o_por_compasso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "openspec_specs_cifra_bateria_customizada_spec_requirement_classifica\u00e7\u00e3o_por_dicion\u00e1rio_de_bateria",
+      "target": "openspec_specs_cifra_bateria_customizada_spec_scenario_mudan\u00e7a_de_padr\u00e3o_e_sil\u00eancio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "openspec_specs_cifra_bateria_customizada_spec_requirement_gera\u00e7\u00e3o_da_cifra_de_bateria_customizada_com_revis\u00e3o_gemma",
+      "target": "openspec_specs_cifra_bateria_customizada_spec_scenario_arquivo_final_com_nome_da_m\u00fasica_cifra_md",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/cifra-bateria-customizada/spec.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "openspec_specs_cifra_bateria_customizada_spec_requirement_teste_unit\u00e1rio_de_valida\u00e7\u00e3o_das_anota\u00e7\u00f5es_no_arquivo_final",
+      "target": "openspec_specs_cifra_bateria_customizada_spec_scenario_verifica\u00e7\u00e3o_de_presen\u00e7a_de_anota\u00e7\u00f5es_de_bateria_na_cifra_gerada",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "openspec_specs_mvp1_spec",
+      "target": "openspec_specs_mvp1_spec_mvp_1_specification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "openspec_specs_mvp1_spec_mvp_1_specification",
+      "target": "openspec_specs_mvp1_spec_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "openspec_specs_mvp1_spec_requirements",
+      "target": "openspec_specs_mvp1_spec_requirement_primeiro_arquivo_de_cifra",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "openspec_specs_mvp1_spec_requirements",
+      "target": "openspec_specs_mvp1_spec_requirement_separa\u00e7\u00e3o_de_vocal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "openspec_specs_mvp1_spec_requirements",
+      "target": "openspec_specs_mvp1_spec_requirement_tempo_compasso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "openspec_specs_mvp1_spec_requirements",
+      "target": "openspec_specs_mvp1_spec_requirement_transcri\u00e7\u00e3o_da_letra",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "openspec_specs_mvp1_spec_requirement_separa\u00e7\u00e3o_de_vocal",
+      "target": "openspec_specs_mvp1_spec_scenario_mp3_v\u00e1lido",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "openspec_specs_mvp1_spec_requirement_transcri\u00e7\u00e3o_da_letra",
+      "target": "openspec_specs_mvp1_spec_scenario_idioma_informado",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "openspec_specs_mvp1_spec_requirement_tempo_compasso",
+      "target": "openspec_specs_mvp1_spec_scenario_m\u00fasica_em_4_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/mvp1/spec.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "openspec_specs_mvp1_spec_requirement_primeiro_arquivo_de_cifra",
+      "target": "openspec_specs_mvp1_spec_scenario_letra_e_compassos_dispon\u00edveis",
+      "confidence_score": 1.0
     }
   ],
-  "hyperedges": [
-    {
-      "id": "mvp1_pipeline",
-      "label": "MVP1 pipeline: vocals to lyrics and bars to cifra",
-      "nodes": [
-        "drumscustomchords_spec_vocal_separation",
-        "drumscustomchords_spec_lyrics_transcription",
-        "drumscustomchords_spec_tempo_bars",
-        "drumscustomchords_spec_cifra_output"
-      ],
-      "relation": "form",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md"
-    }
-  ]
+  "hyperedges": [],
+  "built_at_commit": "84f134b37297538864c2b89ce26ec6dd171f5d42"
 }

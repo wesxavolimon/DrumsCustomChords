@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python -c \"import sys,pathlib,json,subprocess;raw=sys.stdin.buffer.read().decode('utf-8','replace');d=json.loads(raw) if raw.strip() else {};cmd=str(d.get('tool_input',d).get('command',''));hit=any(k in cmd for k in ('git add','git commit'));e=pathlib.Path('graphify-out/graph.json').exists();(hit and e) and (subprocess.run([r'C:\\Users\\User\\.local\\bin\\graphify.EXE','update','.'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL),subprocess.run(['git','add','graphify-out/'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL));(hit and e) and sys.stdout.write(json.dumps({'hookSpecificOutput':{'hookEventName':'PreToolUse','additionalContext':'MANDATORY: graphify-out/ updated and staged automatically via git add before commit.'}}))\""
+          }
+        ]
+      }
+    ]
+  }
+}

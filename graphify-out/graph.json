@@ -1,0 +1,817 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "mvp1_pipeline",
+        "label": "MVP1 pipeline: vocals to lyrics and bars to cifra",
+        "nodes": [
+          "drumscustomchords_spec_vocal_separation",
+          "drumscustomchords_spec_lyrics_transcription",
+          "drumscustomchords_spec_tempo_bars",
+          "drumscustomchords_spec_cifra_output"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "run.py",
+      "file_type": "code",
+      "source_file": "src/run.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_run",
+      "community": 1,
+      "norm_label": "run.py"
+    },
+    {
+      "label": "now()",
+      "file_type": "code",
+      "source_file": "src/run.py",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "src_run_now",
+      "community": 3,
+      "norm_label": "now()"
+    },
+    {
+      "label": "sha()",
+      "file_type": "code",
+      "source_file": "src/run.py",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "src_run_sha",
+      "community": 1,
+      "norm_label": "sha()"
+    },
+    {
+      "label": "file_sig()",
+      "file_type": "code",
+      "source_file": "src/run.py",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "src_run_file_sig",
+      "community": 1,
+      "norm_label": "file_sig()"
+    },
+    {
+      "label": "load_json()",
+      "file_type": "code",
+      "source_file": "src/run.py",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "src_run_load_json",
+      "community": 1,
+      "norm_label": "load_json()"
+    },
+    {
+      "label": "save_json_atomic()",
+      "file_type": "code",
+      "source_file": "src/run.py",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "src_run_save_json_atomic",
+      "community": 1,
+      "norm_label": "save_json_atomic()"
+    },
+    {
+      "label": "tmp_path()",
+      "file_type": "code",
+      "source_file": "src/run.py",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "src_run_tmp_path",
+      "community": 3,
+      "norm_label": "tmp_path()"
+    },
+    {
+      "label": "nonempty()",
+      "file_type": "code",
+      "source_file": "src/run.py",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "src_run_nonempty",
+      "community": 3,
+      "norm_label": "nonempty()"
+    },
+    {
+      "label": "parse_overrides()",
+      "file_type": "code",
+      "source_file": "src/run.py",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "src_run_parse_overrides",
+      "community": 1,
+      "norm_label": "parse_overrides()"
+    },
+    {
+      "label": "preflight()",
+      "file_type": "code",
+      "source_file": "src/run.py",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "src_run_preflight",
+      "community": 1,
+      "norm_label": "preflight()"
+    },
+    {
+      "label": "run_step()",
+      "file_type": "code",
+      "source_file": "src/run.py",
+      "source_location": "L106",
+      "_origin": "ast",
+      "id": "src_run_run_step",
+      "community": 3,
+      "norm_label": "run_step()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "src/run.py",
+      "source_location": "L138",
+      "_origin": "ast",
+      "id": "src_run_main",
+      "community": 1,
+      "norm_label": "main()"
+    },
+    {
+      "label": "DrumsCustomChords project",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "drumscustomchords_agents_project",
+      "community": 2,
+      "norm_label": "drumscustomchords project"
+    },
+    {
+      "label": "Technical premises (local Python, cache, sequential VRAM, timing from code not LLM)",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Timing comes from code to avoid LLM hallucination; Demucs/Whisper/Gemma run in sequence due to 12GB VRAM",
+      "id": "drumscustomchords_agents_technical_premises",
+      "community": 2,
+      "norm_label": "technical premises (local python, cache, sequential vram, timing from code not llm)"
+    },
+    {
+      "label": "Phase 1 - Drum map",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "drumscustomchords_agents_phase1",
+      "community": 2,
+      "norm_label": "phase 1 - drum map"
+    },
+    {
+      "label": "Phase 2 - Chord sheet and lyrics aligned to map",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "drumscustomchords_agents_phase2",
+      "community": 2,
+      "norm_label": "phase 2 - chord sheet and lyrics aligned to map"
+    },
+    {
+      "label": "Phase 3 - PDF output, OCR (TBD)",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "drumscustomchords_agents_phase3",
+      "community": 2,
+      "norm_label": "phase 3 - pdf output, ocr (tbd)"
+    },
+    {
+      "label": "Git/OpenSpec workflow (feature/mvp1, no PRs)",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "drumscustomchords_agents_git_workflow",
+      "community": 2,
+      "norm_label": "git/openspec workflow (feature/mvp1, no prs)"
+    },
+    {
+      "label": "MVP 1 deliverable",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "drumscustomchords_agents_mvp1",
+      "community": 2,
+      "norm_label": "mvp 1 deliverable"
+    },
+    {
+      "label": "MVP1 design decisions (cache per step, Demucs, faster-whisper, librosa)",
+      "file_type": "document",
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "drumscustomchords_design_decisions",
+      "community": 0,
+      "norm_label": "mvp1 design decisions (cache per step, demucs, faster-whisper, librosa)"
+    },
+    {
+      "label": "cifra.md format",
+      "file_type": "concept",
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "drumscustomchords_design_cifra_format",
+      "community": 0,
+      "norm_label": "cifra.md format"
+    },
+    {
+      "label": "MVP1 risks (Whisper errors, non-4/4 beat tracking)",
+      "file_type": "concept",
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "drumscustomchords_design_risks",
+      "community": 0,
+      "norm_label": "mvp1 risks (whisper errors, non-4/4 beat tracking)"
+    },
+    {
+      "label": "MVP1 proposal",
+      "file_type": "document",
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Phase 1 is large; MVP1 validates the base with the simplest part",
+      "id": "drumscustomchords_proposal_mvp1",
+      "community": 0,
+      "norm_label": "mvp1 proposal"
+    },
+    {
+      "label": "Capability: vocal-separation",
+      "file_type": "concept",
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "drumscustomchords_spec_vocal_separation",
+      "community": 0,
+      "norm_label": "capability: vocal-separation"
+    },
+    {
+      "label": "Capability: lyrics-transcription",
+      "file_type": "concept",
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "drumscustomchords_spec_lyrics_transcription",
+      "community": 0,
+      "norm_label": "capability: lyrics-transcription"
+    },
+    {
+      "label": "Capability: tempo-bars",
+      "file_type": "concept",
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "drumscustomchords_spec_tempo_bars",
+      "community": 0,
+      "norm_label": "capability: tempo-bars"
+    },
+    {
+      "label": "Capability: cifra-output",
+      "file_type": "concept",
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "drumscustomchords_spec_cifra_output",
+      "community": 0,
+      "norm_label": "capability: cifra-output"
+    },
+    {
+      "label": "MVP1 task list",
+      "file_type": "document",
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/tasks.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "drumscustomchords_tasks_plan",
+      "community": 0,
+      "norm_label": "mvp1 task list"
+    },
+    {
+      "label": "RTK rules",
+      "file_type": "document",
+      "source_file": ".agents/rules/antigravity-rtk-rules.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "drumscustomchords_antigravity_rtk_rules_rtk",
+      "community": 4,
+      "norm_label": "rtk rules"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "src_run",
+      "target": "src_run_file_sig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "src_run",
+      "target": "src_run_load_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "src_run",
+      "target": "src_run_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "src_run",
+      "target": "src_run_nonempty",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "src_run",
+      "target": "src_run_now",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "src_run",
+      "target": "src_run_parse_overrides",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "src_run",
+      "target": "src_run_preflight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "src_run",
+      "target": "src_run_run_step",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "src_run",
+      "target": "src_run_save_json_atomic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "src_run",
+      "target": "src_run_sha",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "src_run",
+      "target": "src_run_tmp_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L214",
+      "weight": 1.0,
+      "source": "src_run_main",
+      "target": "src_run_now",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "src_run_run_step",
+      "target": "src_run_now",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "src_run_main",
+      "target": "src_run_sha",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L179",
+      "weight": 1.0,
+      "source": "src_run_main",
+      "target": "src_run_file_sig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "src_run_main",
+      "target": "src_run_load_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L224",
+      "weight": 1.0,
+      "source": "src_run_main",
+      "target": "src_run_save_json_atomic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "src_run_run_step",
+      "target": "src_run_tmp_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L198",
+      "weight": 1.0,
+      "source": "src_run_main",
+      "target": "src_run_nonempty",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "src_run_run_step",
+      "target": "src_run_nonempty",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "src_run_main",
+      "target": "src_run_parse_overrides",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "src_run_main",
+      "target": "src_run_preflight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/run.py",
+      "source_location": "L227",
+      "weight": 1.0,
+      "source": "src_run_main",
+      "target": "src_run_run_step",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_agents_project",
+      "target": "drumscustomchords_agents_git_workflow"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_agents_project",
+      "target": "drumscustomchords_agents_phase1"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_agents_project",
+      "target": "drumscustomchords_agents_phase2"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_agents_project",
+      "target": "drumscustomchords_agents_phase3"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_agents_project",
+      "target": "drumscustomchords_agents_technical_premises"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_agents_mvp1",
+      "target": "drumscustomchords_agents_phase2"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_proposal_mvp1",
+      "target": "drumscustomchords_agents_mvp1"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_design_decisions",
+      "target": "drumscustomchords_design_cifra_format"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_design_decisions",
+      "target": "drumscustomchords_design_risks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_design_decisions",
+      "target": "drumscustomchords_proposal_mvp1"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_design_cifra_format",
+      "target": "drumscustomchords_spec_cifra_output"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_proposal_mvp1",
+      "target": "drumscustomchords_spec_cifra_output"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_proposal_mvp1",
+      "target": "drumscustomchords_spec_lyrics_transcription"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_proposal_mvp1",
+      "target": "drumscustomchords_spec_tempo_bars"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/proposal.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_proposal_mvp1",
+      "target": "drumscustomchords_spec_vocal_separation"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/tasks.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_tasks_plan",
+      "target": "drumscustomchords_proposal_mvp1"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_spec_vocal_separation",
+      "target": "drumscustomchords_spec_lyrics_transcription"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_spec_lyrics_transcription",
+      "target": "drumscustomchords_spec_cifra_output"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drumscustomchords_spec_tempo_bars",
+      "target": "drumscustomchords_spec_cifra_output"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "mvp1_pipeline",
+      "label": "MVP1 pipeline: vocals to lyrics and bars to cifra",
+      "nodes": [
+        "drumscustomchords_spec_vocal_separation",
+        "drumscustomchords_spec_lyrics_transcription",
+        "drumscustomchords_spec_tempo_bars",
+        "drumscustomchords_spec_cifra_output"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/mvp1-vocal-letra-cifra/specs/mvp1/spec.md"
+    }
+  ]
+}

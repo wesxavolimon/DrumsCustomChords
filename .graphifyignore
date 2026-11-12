@@ -1,0 +1,23 @@
+# Graphify ignore patterns
+graphify-out/
+work/
+out/
+.git/
+.agents/
+
+# Python & environments
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+node_modules/
+dist/
+build/
+
+# Media / binary outputs
+*.mp3
+*.wav
+*.flac
+*.m4a
+

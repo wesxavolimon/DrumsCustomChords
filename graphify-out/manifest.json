@@ -1,0 +1,47 @@
+{
+  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\config\\audio.json": {
+    "mtime": 1794507311.879755,
+    "ast_hash": "4e762b5ebbd3ebe4ccd8f1e09ca950d9",
+    "semantic_hash": "4e762b5ebbd3ebe4ccd8f1e09ca950d9"
+  },
+  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\config\\pipeline.json": {
+    "mtime": 1794507025.4962606,
+    "ast_hash": "c4df70a5e5df007367e7c405249e190f",
+    "semantic_hash": "c4df70a5e5df007367e7c405249e190f"
+  },
+  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\src\\run.py": {
+    "mtime": 1794507329.0200217,
+    "ast_hash": "da1a3cfb72fe207980366bf2937821dc",
+    "semantic_hash": "da1a3cfb72fe207980366bf2937821dc"
+  },
+  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\.agents\\rules\\antigravity-rtk-rules.md": {
+    "mtime": 1794507447.3041205,
+    "ast_hash": "f35bc5f83b89536ea1788c5c86377968",
+    "semantic_hash": "f35bc5f83b89536ea1788c5c86377968"
+  },
+  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\AGENTS.md": {
+    "mtime": 1794505457.7894485,
+    "ast_hash": "174c85de7c65500edfa535fbfe98f34b",
+    "semantic_hash": "174c85de7c65500edfa535fbfe98f34b"
+  },
+  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\openspec\\changes\\mvp1-vocal-letra-cifra\\design.md": {
+    "mtime": 1794505457.80803,
+    "ast_hash": "7dd5105a41be22e7131bf9ae312ecfc4",
+    "semantic_hash": "7dd5105a41be22e7131bf9ae312ecfc4"
+  },
+  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\openspec\\changes\\mvp1-vocal-letra-cifra\\proposal.md": {
+    "mtime": 1794505457.8345146,
+    "ast_hash": "b7f93ed05f791b01b105c870a0c6fe77",
+    "semantic_hash": "b7f93ed05f791b01b105c870a0c6fe77"
+  },
+  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\openspec\\changes\\mvp1-vocal-letra-cifra\\specs\\mvp1\\spec.md": {
+    "mtime": 1794505457.8714595,
+    "ast_hash": "8117913625aad285bf880434697c6d58",
+    "semantic_hash": "8117913625aad285bf880434697c6d58"
+  },
+  "C:\\Users\\User\\Documents\\TI\\Lavi\\docker-composes\\DrumsCustomChords\\openspec\\changes\\mvp1-vocal-letra-cifra\\tasks.md": {
+    "mtime": 1794505457.9165432,
+    "ast_hash": "59e68f3cc3891967b6d0b076e639453c",
+    "semantic_hash": "59e68f3cc3891967b6d0b076e639453c"
+  }
+}

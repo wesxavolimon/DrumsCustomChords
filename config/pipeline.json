@@ -1,0 +1,48 @@
+{
+  "name": "mvp1",
+  "version": 1,
+  "paths": {
+    "work": "work/{id}",
+    "out": "out/{id}",
+    "manifest": "work/{id}/manifest.json",
+    "logs": "work/{id}/logs"
+  },
+  "preflight": {
+    "binaries": ["ffmpeg"]
+  },
+  "steps": [
+    {
+      "name": "separate_vocals",
+      "script": "src/workflows/separate_vocals.py",
+      "inputs": ["{input}"],
+      "outputs": ["{work}/vocals.wav"],
+      "params": { "model": "htdemucs" },
+      "retries": 1
+    },
+    {
+      "name": "transcribe",
+      "script": "src/workflows/transcribe.py",
+      "inputs": ["{work}/vocals.wav"],
+      "outputs": ["{work}/letra.json"],
+      "params": { "model": "large-v3", "lang": "pt" },
+      "retries": 1
+    },
+    {
+      "name": "tempo_compasso",
+      "script": "src/workflows/tempo_compasso.py",
+      "inputs": ["{input}"],
+      "outputs": ["{work}/compassos.json"],
+      "params": { "beats_per_bar": 4 },
+      "retries": 0
+    },
+    {
+      "name": "make_cifra",
+      "script": "src/workflows/make_cifra.py",
+      "inputs": ["{work}/letra.json", "{work}/compassos.json"],
+      "outputs": ["{out}/cifra.md"],
+      "params": {},
+      "retries": 0
+    }
+  ]
+}
+

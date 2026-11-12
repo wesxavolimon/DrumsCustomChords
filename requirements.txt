@@ -1,0 +1,6 @@
+demucs
+faster-whisper
+librosa
+soundfile
+numpy
+

@@ -39,11 +39,11 @@ Saída em PDF, OCR de PDFs escaneados, mais formatos de cifra.
 
 Change OpenSpec: `openspec/changes/mvp1-vocal-letra-cifra/`
 
-1. Script que separa o vocal do MP3 (`src/workflows/separate_vocals.py` via Demucs `--two-stems vocals`)
+1. Script que separa o vocal do MP3 (`src/workflows/separate_vocals.py` via container Docker `wesley-demucs` ou Demucs local `--two-stems vocals`)
 2. Gera o áudio separado (`work/<id>/vocals.wav`)
-3. Script do Whisper (`src/workflows/transcribe.py` via `faster-whisper` com fallback para `openai-whisper`)
+3. Script do Whisper (`src/workflows/transcribe.py` via `faster-whisper` com fallback para `openai-whisper` local no Python 3.12)
 4. Transcreve a letra com tempo (`work/<id>/letra.json`, segmentos `start`/`end`/`text`)
-5. Script que gera tempo-compasso (`src/workflows/tempo_compasso.py` via Librosa: BPM, beats e compassos 4/4 em `work/<id>/compassos.json`)
+5. Script que gera tempo-compasso (`src/workflows/tempo_compasso.py` via container Docker `wesley-metronomo` ou Librosa local: BPM, beats e compassos 4/4 em `work/<id>/compassos.json`)
 6. Gera o 1º arquivo de cifra (`src/workflows/make_cifra.py`, letra alinhada por compasso em `out/<id>/cifra.md`)
 
 Ainda **fora** deste entregável: download de playlist, detecção de golpes de bateria, dicionário de códigos, Gemma, PDF de cifra.

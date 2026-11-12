@@ -75,8 +75,16 @@ class TestWorkflowScripts(unittest.TestCase):
             out_wav = tmp_path / "work" / "vocals.wav"
 
             def fake_run(cmd, capture_output, text):
-                out_idx = cmd.index("-o") + 1
-                demucs_out = Path(cmd[out_idx]) / "htdemucs" / "song"
+                demucs_out = tmp_path / "htdemucs" / "song"
+                if "-o" in cmd:
+                    out_arg = cmd[cmd.index("-o") + 1]
+                    if out_arg != "/out":
+                        demucs_out = Path(out_arg) / "htdemucs" / "song"
+                    else:
+                        for i, c in enumerate(cmd):
+                            if c == "-v" and i + 1 < len(cmd) and cmd[i + 1].endswith(":/out"):
+                                host_out = cmd[i + 1][:-5]
+                                demucs_out = Path(host_out) / "htdemucs" / "song"
                 demucs_out.mkdir(parents=True, exist_ok=True)
                 (demucs_out / "vocals.wav").write_bytes(b"RIFF-fake-wav")
                 return mock.Mock(returncode=0, stdout="ok", stderr="")

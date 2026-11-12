@@ -1,14 +1,19 @@
 #!/usr/bin/env python
 """Detects BPM, beats, and bar boundaries (compassos) from an audio file.
 
+Supports local `librosa` or fallback to the `wesley-metronomo` Docker container.
+
 Step contract:
     python src/workflows/tempo_compasso.py --inputs <audio.mp3> --outputs <compassos.json> --params '<json>'
 
 Params:
     beats_per_bar (int): Beats per measure (default: 4 for 4/4).
+    docker_image (str): Docker image when local librosa is unavailable (default: "wesley-metronomo").
 """
 import argparse
+import importlib.util
 import json
+import subprocess
 import sys
 from pathlib import Path
 
@@ -45,20 +50,64 @@ def build_bars_from_beats(beat_times: list[float], duration: float, beats_per_ba
     return bars
 
 
+def _analyze_with_local_librosa(input_audio: Path) -> tuple[float, list[float], float]:
+    import librosa
+    import numpy as np
+
+    y, sr = librosa.load(str(input_audio), sr=None)
+    duration = float(librosa.get_duration(y=y, sr=sr))
+    tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr, trim=False)
+    bpm = float(np.asarray(tempo).flat[0]) if np.size(tempo) else 120.0
+    beat_times = [float(t) for t in librosa.frames_to_time(beat_frames, sr=sr)]
+    return bpm, beat_times, duration
+
+
+def _analyze_with_docker(input_audio: Path, docker_image: str) -> tuple[float, list[float], float]:
+    in_dir = str(input_audio.resolve().parent)
+    py_code = (
+        "import json, sys, librosa, numpy as np; "
+        "p = sys.argv[1]; "
+        "y, sr = librosa.load(p, sr=None); "
+        "dur = float(librosa.get_duration(y=y, sr=sr)); "
+        "tempo, frames = librosa.beat.beat_track(y=y, sr=sr, trim=False); "
+        "bpm = float(np.asarray(tempo).flat[0]) if np.size(tempo) else 120.0; "
+        "beats = [float(t) for t in librosa.frames_to_time(frames, sr=sr)]; "
+        "print(json.dumps({'bpm': bpm, 'beat_times': beats, 'duration': dur}))"
+    )
+    cmd = [
+        "docker", "run", "--rm",
+        "--entrypoint", "python3",
+        "-v", f"{in_dir}:/in",
+        docker_image,
+        "-c", py_code,
+        f"/in/{input_audio.name}",
+    ]
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    if proc.returncode != 0:
+        raise RuntimeError(
+            f"Docker librosa analysis failed (exit {proc.returncode}):\n{proc.stdout}\n{proc.stderr}"
+        )
+    lines = [ln.strip() for ln in proc.stdout.splitlines() if ln.strip().startswith("{")]
+    if not lines:
+        raise RuntimeError(f"Unexpected output from {docker_image}:\n{proc.stdout}")
+    data = json.loads(lines[-1])
+    return float(data["bpm"]), [float(x) for x in data["beat_times"]], float(data["duration"])
+
+
 def detect_tempo_and_bars(input_audio: Path, output_json: Path, params: dict) -> dict:
     if not input_audio.is_file():
         raise FileNotFoundError(f"Input audio not found: {input_audio}")
 
-    import librosa
-    import numpy as np
-
     beats_per_bar = int(params.get("beats_per_bar", 4))
-    y, sr = librosa.load(str(input_audio), sr=None)
-    duration = float(librosa.get_duration(y=y, sr=sr))
+    docker_image = params.get("docker_image", "wesley-metronomo")
+    use_docker = params.get("use_docker")
+    if use_docker is None:
+        use_docker = importlib.util.find_spec("librosa") is None
 
-    tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr, trim=False)
-    bpm = float(np.asarray(tempo).flat[0]) if np.size(tempo) else 120.0
-    beat_times = [float(t) for t in librosa.frames_to_time(beat_frames, sr=sr)]
+    if use_docker:
+        bpm, beat_times, duration = _analyze_with_docker(input_audio, docker_image)
+    else:
+        bpm, beat_times, duration = _analyze_with_local_librosa(input_audio)
 
     if not beat_times and bpm > 0 and duration > 0:
         step = 60.0 / bpm
@@ -98,4 +147,3 @@ def main(argv=None) -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
-

@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 """Transcribes vocals audio into timestamped lyrics segments using Whisper.
 
-Supports `faster-whisper` (preferred) with automatic fallback to `openai-whisper`.
+Supports the `wesley-whisper` Docker container (default when faster_whisper is not installed locally),
+local `faster-whisper`, or local `openai-whisper`.
 
 Step contract:
     python src/workflows/transcribe.py --inputs <vocals.wav> --outputs <letra.json> --params '<json>'
@@ -11,12 +12,56 @@ Params:
     lang (str): Language code such as "pt" or "en" (default: "pt").
     device (str): "cuda", "cpu", or "auto" (default: "auto").
     compute_type (str): faster-whisper compute type (default: "float16" on cuda, "int8" on cpu).
+    docker_image (str): Docker image to use (default: "wesley-whisper").
+    use_docker (bool): Force Docker usage (default: True when faster_whisper is not installed locally).
 """
 import argparse
 import importlib.util
 import json
+import subprocess
 import sys
 from pathlib import Path
+
+
+def _transcribe_with_docker(
+    audio_path: Path,
+    output_json: Path,
+    model_name: str,
+    lang: str | None,
+    device: str,
+    compute_type: str | None,
+    docker_image: str,
+) -> list[dict]:
+    in_dir = str(audio_path.resolve().parent)
+    out_dir = str(output_json.resolve().parent)
+    output_json.parent.mkdir(parents=True, exist_ok=True)
+
+    docker_device = "cpu" if device in ("auto", None, "") else str(device)
+    docker_compute = compute_type or ("float16" if docker_device == "cuda" else "int8")
+
+    cmd = [
+        "docker", "run", "--rm",
+        "-v", f"{in_dir}:/in",
+        "-v", f"{out_dir}:/out",
+        "-v", "wesley-whisper-cache:/root/.cache/huggingface",
+        docker_image,
+        f"/in/{audio_path.name}",
+        "-o", f"/out/{output_json.name}",
+        "--model", str(model_name),
+        "--device", docker_device,
+        "--compute-type", docker_compute,
+    ]
+    if lang:
+        cmd.extend(["--lang", str(lang)])
+
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    if proc.returncode != 0:
+        raise RuntimeError(
+            f"Docker whisper ({docker_image}) failed (exit {proc.returncode}):\n{proc.stdout}\n{proc.stderr}"
+        )
+    if not output_json.is_file():
+        raise FileNotFoundError(f"Docker whisper did not write {output_json}")
+    return json.loads(output_json.read_text(encoding="utf-8"))
 
 
 def _transcribe_faster_whisper(audio_path: Path, model_name: str, lang: str | None, device: str, compute_type: str | None) -> list[dict]:
@@ -74,13 +119,22 @@ def transcribe_audio(input_wav: Path, output_json: Path, params: dict) -> list[d
     device = params.get("device", "auto")
     compute_type = params.get("compute_type")
     backend = params.get("backend", "auto")
+    docker_image = params.get("docker_image", "wesley-whisper")
+    use_docker = params.get("use_docker")
+
+    if backend == "docker" or use_docker is True:
+        return _transcribe_with_docker(input_wav, output_json, model_name, lang, device, compute_type, docker_image)
 
     if backend == "faster-whisper" or (backend == "auto" and importlib.util.find_spec("faster_whisper")):
         segments = _transcribe_faster_whisper(input_wav, model_name, lang, device, compute_type)
-    elif backend == "whisper" or (backend == "auto" and importlib.util.find_spec("whisper")):
+    elif backend == "whisper":
+        segments = _transcribe_openai_whisper(input_wav, model_name, lang, device)
+    elif backend == "auto" and use_docker is None:
+        return _transcribe_with_docker(input_wav, output_json, model_name, lang, device, compute_type, docker_image)
+    elif importlib.util.find_spec("whisper"):
         segments = _transcribe_openai_whisper(input_wav, model_name, lang, device)
     else:
-        raise RuntimeError("Neither 'faster_whisper' nor 'whisper' is installed.")
+        raise RuntimeError("No Whisper backend available (wesley-whisper Docker, faster_whisper, or whisper).")
 
     output_json.parent.mkdir(parents=True, exist_ok=True)
     output_json.write_text(json.dumps(segments, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -104,4 +158,3 @@ def main(argv=None) -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
-

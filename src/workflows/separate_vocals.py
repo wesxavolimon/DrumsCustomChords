@@ -34,6 +34,7 @@ def _build_demucs_cmd(
             sys.executable, "-m", "demucs.separate",
             "-n", str(model),
             "--two-stems", "vocals",
+            "--mp3",
             "-o", str(tmp_out),
         ]
         if device:
@@ -50,6 +51,7 @@ def _build_demucs_cmd(
         docker_image,
         "-n", str(model),
         "--two-stems", "vocals",
+        "--mp3",
         "-o", "/out",
     ]
     if device:
@@ -79,12 +81,22 @@ def separate_vocals(input_audio: Path, output_wav: Path, params: dict) -> Path:
                 f"Demucs failed (exit {proc.returncode}):\n{proc.stdout}\n{proc.stderr}"
             )
 
-        candidates = list(tmp_out.rglob("vocals.wav"))
+        candidates = list(tmp_out.rglob("vocals.wav")) + list(tmp_out.rglob("vocals.mp3"))
         if not candidates:
-            raise FileNotFoundError(f"Demucs did not produce vocals.wav in {tmp_out}")
+            raise FileNotFoundError(f"Demucs did not produce vocals track in {tmp_out}")
 
+        src_file = candidates[0]
         output_wav.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(candidates[0], output_wav)
+        if src_file.suffix.lower() == output_wav.suffix.lower():
+            shutil.copy2(src_file, output_wav)
+        else:
+            conv = subprocess.run(
+                ["ffmpeg", "-y", "-i", str(src_file), str(output_wav)],
+                capture_output=True,
+                text=True,
+            )
+            if conv.returncode != 0 or not output_wav.is_file():
+                shutil.copy2(src_file, output_wav)
 
     return output_wav
 
